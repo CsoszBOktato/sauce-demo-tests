@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 # URLs
 ${HOMEPAGE_URL}    https://www.saucedemo.com/
+${INVENTORY_PAGE_URL}    https://www.saucedemo.com/inventory.html
 
 # Locators
 ${USERNAME_INPUT}    //input[@id='user-name']
@@ -16,6 +17,8 @@ ${LOGOUT}    //a[@id='logout_sidebar_link']
 ${BROWSER}    Chrome
 ${USERNAME_STANDARD}    standard_user
 ${PASSWORD}    secret_sauce
+${ERROR_MESSAGE_USERNAME}    Epic sadface: Username is required
+${ERROR_MESSAGE_PASSWORD}    Epic sadface: Password is required
 
 *** Keywords ***
 Test Setup
