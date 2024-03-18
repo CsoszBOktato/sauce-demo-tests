@@ -19,6 +19,8 @@ ${USERNAME_STANDARD}    standard_user
 ${PASSWORD}    secret_sauce
 ${ERROR_MESSAGE_USERNAME}    Epic sadface: Username is required
 ${ERROR_MESSAGE_PASSWORD}    Epic sadface: Password is required
+${ERROR_MESSAGE_WRONG_PASSWORD}    Epic sadface: Username and password do not match any user in this service
+${ERROR_MESSAGE_LOGIN_REQUIRED}    Epic sadface: You can only access '/inventory.html' when you are logged in.
 
 *** Keywords ***
 Test Setup
@@ -35,5 +37,6 @@ Login Standard User
 
 Logout User
     Click Element    ${HAMBURGER_MENU}
+    Wait Until Element Is Visible    ${LOGOUT}
     Click Element    ${LOGOUT}
     
